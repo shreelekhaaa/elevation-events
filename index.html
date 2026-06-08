@@ -157,7 +157,21 @@ nav {
   .lc-grid, .events-grid { grid-template-columns:1fr; }
   .lc-card:nth-child(2), .lc-card:nth-child(3){ margin-top:0; }
   .carousel-slide { width:280px; }
+  .cal-cta { padding:40px 24px; }
+  .cal-cta-inner { flex-direction:column; align-items:flex-start; gap:24px; }
+  .cal-cta-btn { width:100%; text-align:center; }
 }
+
+/* CALENDAR CTA */
+.cal-cta { background:var(--white); border-top:1px solid rgba(0,0,35,0.07); border-bottom:1px solid rgba(0,0,35,0.07); padding:52px 80px; }
+.cal-cta-inner { display:flex; align-items:center; justify-content:space-between; gap:40px; max-width:1020px; margin:0 auto; }
+.cal-cta-left { display:flex; align-items:flex-start; gap:20px; }
+.cal-cta-icon { flex-shrink:0; width:44px; height:44px; background:rgba(50,130,255,0.08); display:flex; align-items:center; justify-content:center; }
+.cal-cta-eyebrow { font-size:11px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--sky-blue); margin-bottom:8px; }
+.cal-cta-heading { font-family:'Mars Condensed',sans-serif; font-size:clamp(24px,2.4vw,32px); line-height:1.05; color:var(--dark-blue); margin-bottom:8px; }
+.cal-cta-sub { font-size:14px; color:rgba(0,0,35,0.5); line-height:1.65; max-width:420px; }
+.cal-cta-btn { background:var(--dark-blue); color:var(--white); border:none; padding:15px 36px; font-family:'Object Sans',sans-serif; font-weight:700; font-size:13px; letter-spacing:0.08em; text-transform:uppercase; cursor:pointer; white-space:nowrap; flex-shrink:0; transition:opacity 0.2s; }
+.cal-cta-btn:hover { opacity:0.85; }
 </style>
 </head>
 <body>
@@ -373,6 +387,23 @@ nav {
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- CALENDAR CTA -->
+<section class="cal-cta">
+  <div class="cal-cta-inner">
+    <div class="cal-cta-left">
+      <div class="cal-cta-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3282FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><circle cx="12" cy="15" r="1" fill="#3282FF" stroke="none"/><circle cx="8" cy="15" r="1" fill="#3282FF" stroke="none"/><circle cx="16" cy="15" r="1" fill="#3282FF" stroke="none"/></svg>
+      </div>
+      <div class="cal-cta-text">
+        <div class="cal-cta-eyebrow">Stay in the loop</div>
+        <div class="cal-cta-heading">Never miss a room that's right for you.</div>
+        <p class="cal-cta-sub">Subscribe to the Elevation Events calendar and get every upcoming gathering — directly in your calendar app.</p>
+      </div>
+    </div>
+    <button class="cal-cta-btn">Subscribe to Calendar</button>
   </div>
 </section>
 
